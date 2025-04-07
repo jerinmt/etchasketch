@@ -22,14 +22,16 @@ function createGrid() {
                 } 
                 Event.target.style.opacity = `${x}`;
             });
+            divSquare[j].addEventListener('click', (Event) => {
+                Event.target.style.opacity = `0`;
+            });
         }    
     }
 }
 createGrid();
 document.querySelector("button").addEventListener('click', ()=> {
     removeGrid();
-    size = prompt("Enter the required size(Min:1 Max:100):");
-    size = size - 0;
+    size = prompt("Enter the required resolution(Min:1 Max:100):")-0;
     if(size<0) {
         size = 1;
     }
