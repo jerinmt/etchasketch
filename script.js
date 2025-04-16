@@ -15,7 +15,7 @@ function createGrid() {
             divSquare[j].addEventListener('mouseenter', (Event) => {
                 let x = Event.target.style.opacity;
                 if(x<1) {
-                    x = (x-0) + 0.1;
+                    x = (x-0) + 0.2;
                 }
                 else {
                     x=1;
